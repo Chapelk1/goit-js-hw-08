@@ -11,7 +11,9 @@ function timeUpdate(data) {
 }
 
 player.on('timeupdate', throttle(timeUpdate, 1000));
-
+player.getVideoTitle().then(function (title) {
+  console.log('title:', title);
+});
 player
   .setCurrentTime(localStorage.getItem(VIDEO_TIME_KEY))
   .then(function (seconds) {})
