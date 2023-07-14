@@ -40,5 +40,4 @@ function populateTextInput() {
       }
     return;
   }
-  localStorage.setItem(FORM_DATA_KEY, JSON.stringify(formFeedbackData));
 }
