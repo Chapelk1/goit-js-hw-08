@@ -15,14 +15,4 @@ player.getVideoTitle().then(function (title) {
   console.log('title:', title);
 });
 player
-  .setCurrentTime(localStorage.getItem(VIDEO_TIME_KEY))
-  .then(function (seconds) {})
-  .catch(function (error) {
-    switch (error.name) {
-      case 'RangeError':
-        break;
-
-      default:
-        break;
-    }
-  });
+  .setCurrentTime(localStorage.getItem(VIDEO_TIME_KEY) || 0)
